@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/glass_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="24dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Doku Player"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+            
+        <ImageButton
+            android:id="@+id/btnHistory"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_recent_history"
+            app:tint="@color/black" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Stream URL (Supports ?| syntax)"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/black">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputRawUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="4"
+            android:gravity="top"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPlay"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:text="PLAY NETWORK STREAM"
+        android:textStyle="bold"
+        android:letterSpacing="0.05"
+        app:cornerRadius="12dp"
+        app:backgroundTint="@color/black"
+        app:titleTextColor="@color/white" />
+</LinearLayout>
